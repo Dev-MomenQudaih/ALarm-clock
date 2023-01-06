@@ -1,2 +1,3 @@
 # ALarm-clock
-JavaScript ALarm clock
+
+Responsive JavaScript ALarm clock

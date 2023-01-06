@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 0 10px;
+  min-height: 100vh;
+  background: #9536f5;
+}
+
+.wrapper,
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 30vw;
+  padding: 30px 30px 38px;
+  background: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  height: 60vh;
+  margin: 5vh auto 0;
+}
+@media (max-width: 992px) {
+  .wrapper {
+    width: 70vw;
+  }
+}
+@media (max-width: 450px) {
+  .wrapper {
+    width: 95vw;
+  }
+}
+
+.wrapper img {
+  max-width: 103px;
+}
+.wrapper img.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.wrapper h1 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+
+.wrapper .content {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.wrapper .content .column select {
+  font-size: 16px;
+}
+
+.content.disable {
+  cursor: no-drop;
+}
+
+.content .column {
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  width: calc(100% / 3 - 5px);
+}
+
+.content.disable .column {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.column select {
+  width: 100%;
+  height: 53px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 19px;
+}
+
+.wrapper .btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapper .btns button {
+  width: 47%;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 17px 4px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #9536f5;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.wrapper .btns button:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+hr {
+  margin: 10px auto;
+  width: 30vw;
+  height: 5px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.alarms {
+  background-color: white;
+  width: 30vw;
+  margin: 10px auto;
+  padding: 30px;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 992px) {
+  .alarms {
+    width: 70vw;
+  }
+}
+@media (max-width: 450px) {
+  .alarms {
+    width: 95vw;
+  }
+}
+
+.alarms div .alarm-heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.alarms .myList {
+  list-style-type: none;
+}
+
+.alarms .myList .noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+.alarms .myList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 8px 0; */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 8px 10px;
+}
+.alarms .myList li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.alarms .myList li button {
+  background-color: #9536f5;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+
+/* alarm image animation */
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
